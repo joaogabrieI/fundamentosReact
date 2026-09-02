@@ -1,9 +1,18 @@
-const events = () => {
-    
+const Events = () => {
+    const handleMyEvent = (e) => {
+        console.log(e)  
+        console.log('Ativou o evento!')
+    }
     return (
         <div>
             <div>
-                <button>Clique aqui</button>
+                <button onClick={handleMyEvent}>Clique aqui</button>
+            </div>
+            <div>
+                <button onClick={() => console.log('Clicou!')}>Clique aqui também</button>
+            </div>
+            <div>
+                <button>Clique aqui também2</button>
             </div>
         </div>
     )
@@ -11,4 +20,4 @@ const events = () => {
 
 }
 
-export default events
+export default Events
